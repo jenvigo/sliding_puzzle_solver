@@ -1,4 +1,5 @@
 <?php
+include_once 'vendor/autoload.php';
 $simpleExample = [
     [1, 2, 3, 4],
     [5, 0, 6, 8],
@@ -21,7 +22,15 @@ foreach ($simpleExample as $x => $r) {
         $homonym_in_end = $end[$ct["x"]][$ct["y"]];
         if ($item == $homonym_in_end) {
             $distance = 0;
-        }else{
+        } else {
+            /*todo: distance should be a bit more self-explaining
+            the cost? h cost? f cost? sum?
+            todo: two methods, one for getting the coordinates of a number in the array
+            todo: another for checking one many steps are away than where it's supposed to be placed
+            */
+            $coords = App\Helper::coordinate_finder($item, $end);
+            /*use the algorithm...a*??  */
+
             $distance = " ";
         }
         $arr_distance[$x][$y] = $distance;
