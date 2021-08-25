@@ -11,7 +11,7 @@ class Helper
     {
         foreach ($array as $x => $r) {
             foreach ($r as $y => $item) {
-                if ($item == $number) {
+                if ($item === $number) {
                     return [$x, $y];
                 }
             }
